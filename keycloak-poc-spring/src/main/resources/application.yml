@@ -1,0 +1,24 @@
+server:
+    port: 8091
+
+logging:
+    file:
+        path: /var/log/spring
+    level:
+        com.demo: DEBUG
+
+spring:
+    application:
+        name: keycloak-poc-spring
+
+    profiles:
+        active: dev
+
+keycloak:
+    auth-server-url: https://localhost:8443/auth
+    realm: keycloak-poc
+    resource: keycloak-poc-spring
+    bearer-only: true
+    confidential-port: 0
+    ssl-required: none
+    disable-trust-manager: true # disable ssl for keycloak-client

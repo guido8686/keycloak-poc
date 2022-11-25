@@ -1,0 +1,47 @@
+<h1>{{title}}</h1>
+
+<div>Connected to Keycloak on: {{authUrl}}</div>
+<button (click)="logout()">LOGOUT</button>
+
+<p><b>Simulate HTTP request to backend:</b></p>
+
+<div><button (click)="test()">Test request</button></div>
+<div *ngIf="response">
+  <div><b>Response:</b></div>
+  <div><pre>{{response | json}}</pre></div>
+</div>
+
+<p><b>Retrieve open-id config from Keycloak:</b></p>
+
+<div>
+  <button (click)="printOpenIdConfig()">Request oid config</button>
+  <button (click)="clearOpenIdConfig()">Clear oid config</button>
+</div>
+<div *ngIf="openIdConfig">
+  <div><b>Open ID config:</b></div>
+  <div><pre>{{openIdConfig | json}}</pre></div>
+</div>
+
+<p><b>Print the tokens:</b></p>
+
+<div>
+  <button (click)="printTokens()">Print tokens</button>
+  <button (click)="clearTokens()">Clear tokens</button>
+</div>
+<div *ngIf="accessToken">
+
+  <div><b>Access token:</b></div>
+  <div><textarea rows="10" cols="100">{{accessToken}}</textarea></div>
+  <div><b>Access token parsed:</b></div>
+  <div><pre>{{accessTokenParsed | json}}</pre></div>
+
+  <div><b>ID token:</b></div>
+  <div><textarea rows="10" cols="100">{{idToken}}</textarea></div>
+  <div><b>ID token parsed:</b></div>
+  <div><pre>{{idTokenParsed | json}}</pre></div>
+
+  <div><b>Refresh token:</b></div>
+  <div><textarea rows="10" cols="100">{{refreshToken}}</textarea></div>
+  <div><b>Refresh token parsed:</b></div>
+  <div><pre>{{refreshTokenParsed | json}}</pre></div>
+</div>

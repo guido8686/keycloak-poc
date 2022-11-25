@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/keycloak-poc.iml" filepath="$PROJECT_DIR$/.idea/keycloak-poc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/keycloak-poc-spring/keycloak-poc-spring.iml" filepath="$PROJECT_DIR$/keycloak-poc-spring/keycloak-poc-spring.iml" />
+    </modules>
+  </component>
+</project>

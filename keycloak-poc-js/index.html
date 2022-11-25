@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keycloak POC</title>
+    <script src="./lib/keycloak.js"></script>
+    <script src="./keycloak-poc-js.js"></script>
+</head>
+<body onload="initKeycloak()">
+
+<h1>Keycloak POC (plain js)</h1>
+
+<div><button onclick="logout()">LOGOUT</button></div>
+
+<p><b>Simulate HTTP request to backend:</b></p>
+
+<div><button onclick="test()" >Test request</button></div>
+<div><pre id="serverResponse"></pre></div>
+
+<p><b>Print the tokens:</b></p>
+
+<div><button onclick="printTokens()">Print tokens</button></div>
+
+<div><b>Access token:</b></div>
+<div><textarea id="accessToken" rows="10" cols="100"></textarea></div>
+<div><b>Access token parsed:</b></div>
+<div><pre id="accessTokenParsed"></pre></div>
+
+<div><b>ID token:</b></div>
+<div><textarea id="idToken" rows="10" cols="100"></textarea></div>
+<div><b>Access token parsed:</b></div>
+<div><pre id="idTokenParsed"></pre></div>
+
+<div><b>Refresh token:</b></div>
+<div><textarea id="refreshToken" rows="10" cols="100"></textarea></div>
+<div><b>Access token parsed:</b></div>
+<div><pre id="refreshTokenParsed"></pre></div>
+
+</body>
+</html>

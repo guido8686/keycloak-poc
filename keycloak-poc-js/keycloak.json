@@ -1,0 +1,5 @@
+{
+  "auth-server-url": "https://localhost:8443/auth",
+  "realm": "keycloak-poc",
+  "resource": "keycloak-poc-js"
+}
